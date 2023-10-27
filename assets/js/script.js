@@ -64,23 +64,10 @@ function affichePokemon(objetPokemon)
     typesPokemon.forEach(type => {
         stringTypes.push(type.name);
         imagesTypes.push(type.image);
-    
-    console.log("string type", stringTypes);
-    console.log("img type", imagesTypes);
-    elementsPokemon.innerText = "Types : " + stringTypes.join(" et ");
-        let pokemonImg = document.createElement("img");
-        pokemonImg.setAttribute("src" , type.image);
-        console.log("Cette donnée est mon type" , pokemonImg);
-        document.querySelector("li:nth-child(2)").appendChild(pokemonImg); //le problème était ici sur le appendChild mdrrrrr
-
     });
-    // let pokemonImg = document.createElement("img");
-    // console.log("koko", elementsPokemon);
-    // pokemonImg.setAttribute("src" , type.image);
-    // console.log("Cette donnée est mon type" , pokemonImg);
-    // elementsPokemon.appendChild(pokemonImg);
-    // console.log("gngnn" , elementsPokemon);
-
-    // console.log("coco" , elementsPokemon);
-    // document.querySelector(".donnee").appendChild(elementsPokemon);
+    console.log(stringTypes);
+    console.log(imagesTypes);
+    elementsPokemon.innerText = "Types : " + stringTypes.join(" et ");
+    console.log(elementsPokemon);
+    document.querySelector(".donnee").appendChild(elementsPokemon);
 }
